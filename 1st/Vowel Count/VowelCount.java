@@ -8,7 +8,6 @@ public class VowelCount {
         int count = Integer.parseInt(scan.nextLine());
         for(int i = 0; i < count; i++)
         {
-            int moreVowels = 0;
             int countVowels = 0;
             String name = scan.nextLine();
             for(int x = 0; x < name.length(); x++)
@@ -19,9 +18,14 @@ public class VowelCount {
                         countVowels++;
                 }
             }
-            if(countVowels > name.length() - countVowels)
+            if(countVowels > name.length() - countVowels){
                 System.out.println(name);
-                System.out.println(moreVowels);      
+                System.out.println(1);
+            }
+            else{
+                System.out.println(name);
+                System.out.println(0);
+            }
         }
     }
 }
