@@ -1,11 +1,19 @@
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
-        String line = "abcXabcXabc";
-        char rem = 'X';
-        while(line.indexOf(rem) > 0)
-        {
-            line = line.substring(0, line.indexOf(rem)) + line.substring(line.indexOf(rem) + 1);
-        }
-        System.out.println(line);
+        int[ ] list = {74, 20, 16, 26, 72};
+
+        for(int i=0; i<list.length; i++)
+        
+                      if(list[i]>list[i+1])
+        
+                                       list[i]=list[i+1];
+        
+        for(int x:list)
+        
+                 System.out.print(x+" ");
+        
+         
     }
 }
