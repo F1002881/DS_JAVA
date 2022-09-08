@@ -21,7 +21,8 @@ public class VowelCount {
             }
             if(countVowels > name.length() - countVowels)
                 System.out.println(name);
-                System.out.println(moreVowels);      
+                System.out.println(moreVowels);
+                System.out.println("balls");     
         }
     }
 }
