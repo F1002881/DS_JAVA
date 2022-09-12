@@ -14,6 +14,7 @@ public class WordTester{
             arr[i] = w;
         }
         System.out.println(Arrays.toString(arr));
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
-    
 }

@@ -12,5 +12,16 @@ public class Word {
     public int getLength()
     {return word.length();}
 
-    
+    public int compareTo(Word other)
+    {
+        if(getLength() > other.getLength())
+            return -1;
+        else if(getLength() < other.getLength())
+            return 1;
+        return word.compareTo(other.word);
+    }
+    public String toString()
+    {
+        return word;
+    }
 }
