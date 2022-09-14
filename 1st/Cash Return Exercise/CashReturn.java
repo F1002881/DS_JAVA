@@ -3,7 +3,7 @@ import java.io.*;
 
 public class CashReturn {
     public static void main(String[] args) throws IOException{
-        Scanner scan = new Scanner(new File("1st/Cash Return Exercise/CashReturn.dat"));
+        Scanner scan = new Scanner(new File("CashReturn.dat"));
         int num = Integer.parseInt(scan.nextLine());
         double q = 0.25;
         double d = 0.10;
