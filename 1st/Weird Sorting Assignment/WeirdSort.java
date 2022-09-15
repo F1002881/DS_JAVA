@@ -3,7 +3,7 @@ import java.io.*;
 
 public class WeirdSort{
     public static void main(String[] args) throws IOException{
-        Scanner scan = new Scanner(new File("1st/Weird Sorting Assignment/weirdSort.dat"));
+        Scanner scan = new Scanner(new File("weirdSort.dat"));
         int count = Integer.parseInt(scan.nextLine());
         String alph = "abcdefghijklmnopqrstuvwxyz";
         String[] wordArr = new String[count];
