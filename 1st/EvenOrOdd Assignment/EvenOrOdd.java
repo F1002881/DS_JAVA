@@ -3,7 +3,7 @@ import java.io.*;
 
 public class EvenOrOdd {
     public static void main(String[] args) throws IOException{
-        Scanner scan = new Scanner(new File("1st/EvenOrOdd Assignment/oddeven.dat"));
+        Scanner scan = new Scanner(new File("oddeven.dat"));
         while(scan.hasNextLine())
         {
             HashSet<Integer> odds = new HashSet<Integer>();
