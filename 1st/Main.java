@@ -1,8 +1,16 @@
 import java.util.*;
+import java.io.*;
 
 public class Main {
     public static void main(String[] args) {
-        double num = 6.57;
-        System.out.println(num % 10);
+        Set<String> s = new TreeSet<String>();
+
+        s.add("one");
+
+        s.add("two");
+
+        s.add("three");
+
+        System.out.println(s);
     }
 }
