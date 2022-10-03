@@ -3,7 +3,7 @@ import java.io.*;
 
 public class RemDupsSort {
     public static void main(String[] args) throws IOException{
-        Scanner scan = new Scanner(new File("2nd/Quizzes/Duplicate Letters Quiz/duplicate.dat"));
+        Scanner scan = new Scanner(new File("duplicate.dat"));
         int numLines = Integer.parseInt(scan.nextLine());
         for(int i = 0; i < numLines; i++)
         {
@@ -12,7 +12,7 @@ public class RemDupsSort {
             for(int x = 0; x < line.length(); x++)
             {
                 char letter = line.charAt(x);
-                if(letter.equals(' ') == false)
+                if(letter != ' ')
                 {
                     letterSet.add(letter);
                 }
