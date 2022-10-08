@@ -13,9 +13,9 @@ public class WeirdSorting {
 
         for(int y = 1; y < numLines; y++)
         {
-            for(int i = 0; i < numLines; i ++)
+            for(int i = 1; i < numLines; i ++)
             {
-                if(words[i-1].charAt(1) < words[i].charAt(1))
+                if(words[i-1].charAt(1) > words[i].charAt(1))
                 {
                     String temp = words[i];
                     words[i] = words[i-1];
@@ -23,7 +23,7 @@ public class WeirdSorting {
                 }
                 else if(words[i-1].charAt(1) == words[i].charAt(1))
                 {
-                    if(words[i-1].charAt(3) < words[i].charAt(3))
+                    if(words[i-1].charAt(3) > words[i].charAt(3))
                     {
                         String temp = words[i];
                         words[i] = words[i-1];
