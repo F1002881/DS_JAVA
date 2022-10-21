@@ -1,0 +1,5 @@
+4
+If this method works properly,
+the lines of text in this file
+will be reversed.
+Remember that some lines might be blank.
