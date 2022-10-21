@@ -9,19 +9,14 @@ public class Expunge {
         {
             String line = scan.nextLine();
             String[] lineArr = line.split(" ");
-            PriorityQueue<Integer> numQueue = new PriorityQueue<Integer>();
+            PriorityQueue<Integer> numQueue = new PriorityQueue<Integer>(Collections.reverseOrder());
             for(int x = 0; x < lineArr.length; x++)
             {
                 numQueue.add(Integer.parseInt(lineArr[x]));
             }
-            Stack<Integer> revStack= new Stack<Integer>();
             while(!numQueue.isEmpty())
             {
-                revStack.push(numQueue.remove());
-            }
-            while(!revStack.isEmpty())
-            {
-                System.out.print(revStack.pop() + " ");
+                System.out.print(numQueue.remove() + " ");
             }
             System.out.println("");
         }
