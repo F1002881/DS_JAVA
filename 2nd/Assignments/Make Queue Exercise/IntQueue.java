@@ -46,6 +46,18 @@ public class IntQueue
 
 	public String toString()
 	{
-		return "";
+		String lst = "[";
+		for(int i = 0; i < listOfInts.size(); i++)
+		{
+			if(i == listOfInts.size() - 1)
+			{
+				lst += listOfInts.get(i); 
+			}
+			else
+			{
+				lst += listOfInts.get(i) + ", ";
+			}
+		}
+		return lst + "]";
 	}
 }
