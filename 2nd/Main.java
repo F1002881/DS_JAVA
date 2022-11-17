@@ -1,15 +1,19 @@
-import java.util.*;
 import static java.lang.System.*;
+import java.util.*;
+import java.io.*;
 
 public class Main{
     public static void main(String[] args) {
-        Queue<Integer> b;
-        b = new PriorityQueue<Integer>();
-        b.add(25);
-        b.add(10);
-        b.add(19);
-        b.add(2);
-        out.println(b);
+        ListNode z = new ListNode("four",
+        new ListNode("one",
+        new ListNode("two",
+        new ListNode("three",
+        new ListNode("six",null)))));
+        while( z != null)
+        {
+            out.println(z.getValue());
+            z=z.getNext();
+        }
         
     }
 }
