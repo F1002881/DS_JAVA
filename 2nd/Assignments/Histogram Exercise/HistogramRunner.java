@@ -6,13 +6,13 @@ import java.io.*;
 public class HistogramRunner {
 	public static void main( String args[] ) throws IOException{
 		Scanner scan = new Scanner(new File("2nd/Assignments/Histogram Exercise/histogram.dat"));
-		while(scan.hasNext() )
+		while(scan.hasNextLine())
 		{
-			String line = scan.next();
+			String line = scan.nextLine();
 			if(line != null)
 			{
 				Histogram lineHist = new Histogram(line);
-				System.out.println(lineHist);
+				System.out.print(lineHist);
 			}
 		}
 	}

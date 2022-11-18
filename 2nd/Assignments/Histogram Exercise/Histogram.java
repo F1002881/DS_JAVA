@@ -14,13 +14,13 @@ public class Histogram
 		{
 			int count = 1;
 			String initial = line.charAt(i) + "";
-			if(initial != " ")
+			if(initial.equals(" ") == false)
 			{
 				histogram.put(initial, count);
 				for(int j = 0; j < line.length(); j++)
 				{
 					String selected = line.charAt(j) + "";
-					if(selected == initial)
+					if(selected.equals(initial))
 						histogram.put(selected, count++);
 				}
 			}
@@ -29,15 +29,26 @@ public class Histogram
 	
 	public int getValue( String s )
 	{
+		for(Map.Entry<String, Integer> character : histogram.entrySet())
+		{
+			if(character.getKey().equals(s))
+				return character.getValue();
+		}
 		return 0;
 	}
 
 	public String toString()
 	{
+		String output = "char   1---5----01---5\n";
 		for(Map.Entry<String, Integer> character : histogram.entrySet())
 		{
-			
+			output += character.getKey() + "      ";
+			for(int i = character.getValue(); i > 0; i--)
+			{
+				output += "*";
+			}
+			output += "\n";
 		}
-		return null;
+		return output + "\n\n";
 	}
 }
