@@ -18,10 +18,12 @@ public class PartList {
 
 	public PartList(String fileName) {
 		this();
+		partsMap = new TreeMap<Part, Integer>();
 		try {
 			Scanner file = new Scanner(new File(fileName));
 			// add code here to read from the file
 			// and add Parts to the map
+			partsMap.put(new Part(file.nextLine()), 1);
 			while (file.hasNextLine()) {
 				String line = file.nextLine();
 				Part p = new Part(line);
@@ -46,8 +48,8 @@ public class PartList {
 
 	public String toString() {
 		String output = "";
-		for (Map.Entry<Part, Integer> entry : partsMap.entrySet()) {
-			output += entry.getKey() + " - " + entry.getValue();
+		for (Part key : partsMap.keySet()) {
+			output += key + " - " + partsMap.get(key);
 			output += "\n";
 		}
 		return output;

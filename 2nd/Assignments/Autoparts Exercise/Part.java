@@ -31,8 +31,11 @@ public class Part implements Comparable<Part> {
 			return this.make.compareTo(rhs.make);
 		} else if (this.model.compareTo(rhs.model) != 0) {
 			return this.model.compareTo(rhs.model);
-		} else {
+		} else if(rhs.year - this.year != 0){
 			return rhs.year - this.year;
+		}
+		else{
+			return this.rest.compareTo(rhs.rest);
 		}
 	}
 
